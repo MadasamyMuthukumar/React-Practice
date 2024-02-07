@@ -1,0 +1,17 @@
+.primary{
+    color: orange;
+}
+.secondary{
+    font-style: italic;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* width: 100%; */
+}
+.container input{
+    padding: 10px;
+    margin: 10px;
+    /* width:300px */
+}

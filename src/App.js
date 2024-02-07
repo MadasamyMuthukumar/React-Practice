@@ -55,7 +55,7 @@ class App extends Component {
           {/* <h1> */}
             DEMO WEBSITE
             <PortalEx />
-            {/* <FWDParent /> */}
+            <FWDParent />
             {/* <FocusInput /> */}
             {/* <CompCheck /> */}
             {/* <Table></Table> */}

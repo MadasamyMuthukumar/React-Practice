@@ -46,6 +46,13 @@ import CompCheck from './components/CompCheck'
 import FocusInput from './components/FocusInput'
 import FWDParent from './components/FWDParent'
 import PortalEx from './components/PortalEx'
+import ErrorEx from './components/ErrorEx'
+import ErrorBoundary from './components/ErrorBoundary'
+import HoverCount from './components/HoverCount'
+import RenderProps from './components/RenderProps';
+import ClickCount from './components/ClickCount';
+import CompA from './components/CompA'
+import { userProvider } from './components/ContextComp'
 class App extends Component {
   render() {
     return (
@@ -54,8 +61,36 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {/* <h1> */}
             DEMO WEBSITE
-            <PortalEx />
-            <FWDParent />
+            <userProvider value="vishwas">
+            <CompA />
+            </userProvider>
+           
+            {/* <RenderProps render={(count,increment) =>(       WITH RENDER
+              <ClickCount count={count} increment={increment}/>
+            ) }/> */}
+            {/* OR */}
+            <RenderProps>
+              {
+                (count,increment) =>(
+                  <ClickCount count={count} increment={increment}/>  //WITHOUT RENDER
+                )
+              }
+            </RenderProps>
+
+
+            {/* <HoverCount name="saaket"/> */}
+            {/* <ErrorBoundary>
+            <ErrorEx name='ajay'/>
+            </ErrorBoundary>
+            <ErrorBoundary>
+            <ErrorEx name='vimal'/>
+            </ErrorBoundary>
+            <ErrorBoundary>
+            <ErrorEx name='guna'/>
+            </ErrorBoundary> */}
+            
+            {/* <PortalEx /> */}
+            {/* <FWDParent /> */}
             {/* <FocusInput /> */}
             {/* <CompCheck /> */}
             {/* <Table></Table> */}

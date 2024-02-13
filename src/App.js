@@ -67,6 +67,13 @@ import Comp_A from './http_hooks/CompA'
 import ReducerCounter from './http_hooks/ReducerCounter';
 import ReducerCounter2 from './http_hooks/ReducerCounter2';
 import ReducerCounter3 from './http_hooks/ReducerCounter3';
+import ClickCount2 from './components/ClickCount2';
+import ReducerUseContex from './http_hooks/ReducerUseContex';
+import ReducerFetch from './http_hooks/ReducerFetch';
+import FormReducer from './http_hooks/FormReducer';
+import CallBack from './http_hooks/CallBack';
+import MemoHook from './http_hooks/MemoHook';
+import FocusInputs from './http_hooks/FocusInput';
 export const UserContex = React.createContext()  //ALSO CREATE USING SEPERATE FILES
 export const channelName = React.createContext()
 class App extends Component {
@@ -78,7 +85,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {/* <h1> */}
           DEMO WEBSITE
-          <ReducerCounter3></ReducerCounter3>
+          <FocusInputs></FocusInputs>
+          {/* <MemoHook></MemoHook> */}
+          {/* <CallBack></CallBack> */}
+          {/* <FormReducer></FormReducer> */}
+          {/* <ReducerFetch></ReducerFetch> */}
+          {/* <ReducerUseContex></ReducerUseContex> */}
+          {/* <ReducerCounter3></ReducerCounter3> */}
           {/* <ReducerCounter2></ReducerCounter2> */}
           {/* <ReducerCounter></ReducerCounter> */}
 
@@ -104,15 +117,21 @@ class App extends Component {
           {/* <UserProvider value="Ajith">
             <CompA />
             </UserProvider> */}
-
-          {/* <RenderProps render={(count,increment) =>(       WITH RENDER
+{/* 
+          <RenderProps render={(count,increment) =>(       //WITH RENDER
               <ClickCount count={count} increment={increment}/>
+             
             ) }/> */}
+
           {/* OR */}
+
           {/* <RenderProps>
               {
                 (count,increment) =>(
+                  <div>
                   <ClickCount count={count} increment={increment}/>  //WITHOUT RENDER
+                  <ClickCount2 count={count} increment={increment} />
+                  </div>
                 )
               }
             </RenderProps> */}

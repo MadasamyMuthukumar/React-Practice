@@ -1,7 +1,8 @@
 import React from 'react';
 const ContextComp = React.createContext()
 
-const userProvider = ContextComp.Provider
-const userConsumer = ContextComp.Consumer
+const UserProvider = ContextComp.Provider
+const UserConsumer = ContextComp.Consumer
 
-export { userProvider , userConsumer }
+export { UserProvider , UserConsumer }
+export default ContextComp

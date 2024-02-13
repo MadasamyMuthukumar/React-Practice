@@ -75,7 +75,6 @@ class Form extends Component {
                 </form>
                 <div>
                     {this.state.isSubmitted && <ShowForm username={this.state.username} age={this.state.age} comment={this.state.comment} />}
-
                 </div>
             </div>
 

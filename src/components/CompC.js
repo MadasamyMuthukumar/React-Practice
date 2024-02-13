@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import {userConsumer} from './ContextComp'
+import { UserConsumer } from './ContextComp'
 class CompC extends Component {
   render() {
     return (
       <div>
-        <userConsumer>
+        <UserConsumer>
             {
                 (username) =>{
                     return <h1>{username}</h1>
                 }
             }
-        </userConsumer>
+        </UserConsumer>
       </div>
     )
   }

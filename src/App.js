@@ -74,6 +74,13 @@ import FormReducer from './http_hooks/FormReducer';
 import CallBack from './http_hooks/CallBack';
 import MemoHook from './http_hooks/MemoHook';
 import FocusInputs from './http_hooks/FocusInput';
+import RefTimer from './http_hooks/RefTimer';
+import ChangeTitle1 from './customHooks/ChangeTitle1';
+// import ChangeTitle2 from './customHooks/ChangeTitle2';
+import Counter1 from './customHooks/Counter1';
+import Counter2 from './customHooks/Counter2';
+import Form1 from './customHooks/Form1';
+import Form2 from './customHooks/Form2';
 export const UserContex = React.createContext()  //ALSO CREATE USING SEPERATE FILES
 export const channelName = React.createContext()
 class App extends Component {
@@ -85,7 +92,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {/* <h1> */}
           DEMO WEBSITE
-          <FocusInputs></FocusInputs>
+          <Form2></Form2>
+          {/* <Form1></Form1> */}
+{/* <Counter1></Counter1>
+<Counter2></Counter2> */}
+
+         {/* <ChangeTitle1></ChangeTitle1>
+         <ChangeTitle2></ChangeTitle2> */}
+          {/* <RefTimer></RefTimer> */}
+          {/* <FocusInputs></FocusInputs> */}
           {/* <MemoHook></MemoHook> */}
           {/* <CallBack></CallBack> */}
           {/* <FormReducer></FormReducer> */}

@@ -22,7 +22,9 @@
 // }
 
 // export default App;
+import { Provider } from 'react-redux';
 import React, { Component } from 'react'
+import { store } from './redux/store';
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -81,18 +83,31 @@ import Counter1 from './customHooks/Counter1';
 import Counter2 from './customHooks/Counter2';
 import Form1 from './customHooks/Form1';
 import Form2 from './customHooks/Form2';
+import CakeContainer from './redux_components/CakeContainer';
+import HookCakeContainer from './redux_components/HookCakeContainer';
+import IceContainer from './redux_components/IceContainer';
+import Payload from './redux_components/Payload';
+import ItemContainer from './redux_components/ItemContainer';
 export const UserContex = React.createContext()  //ALSO CREATE USING SEPERATE FILES
 export const channelName = React.createContext()
 class App extends Component {
   render() {
 
     return (
+
+      <Provider store={store}>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        {/* <header className="App-header"> */}
+          <HookCakeContainer></HookCakeContainer>
+          <CakeContainer />
+          <IceContainer></IceContainer>
+          <Payload></Payload>
+
+          <ItemContainer cake></ItemContainer>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           {/* <h1> */}
-          DEMO WEBSITE
-          <Form2></Form2>
+          {/* DEMO WEBSITE */}
+          {/* <Form2></Form2> */}
           {/* <Form1></Form1> */}
 {/* <Counter1></Counter1>
 <Counter2></Counter2> */}
@@ -197,16 +212,17 @@ class App extends Component {
           {/* </Welcome> */}
           {/* </div> */}
           {/* </h1> */}
-          <a
+          {/* <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
-        </header>
+          </a> */}
+        {/* </header> */}
       </div>
+      </Provider>
     );
   }
 }
